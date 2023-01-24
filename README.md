@@ -12,8 +12,6 @@
 
 
 ## 2. Installation
-First of all you need to insert the .sql file into your database.
-
 Add ```ensure redemrp_banking``` in server.cfg
 
 ## 3. Credits
