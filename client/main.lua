@@ -109,3 +109,14 @@ AddEventHandler("onResourceStop", function(resourceName)
     if resourceName ~= GetCurrentResourceName() then return end
     PromptDelete(BankPrompt)
 end)
+
+--blip
+Citizen.CreateThread(function()
+	Wait(0)
+	for k,v in pairs(Config.Zones) do
+		local blip = N_0x554d9d53f696d002(1664425300, v)
+		SetBlipSprite(blip, Config.BlipSprite, 1)
+		SetBlipScale(blip, Config.BlipScale)
+		Citizen.InvokeNative(0x9CB1A1623062F402, blip, Config.BlipName)
+	end
+end)
